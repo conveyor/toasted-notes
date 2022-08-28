@@ -1,22 +1,23 @@
 import expect from 'expect'
 import React from 'react'
-import {render, unmountComponentAtNode} from 'react-dom'
+import { createRoot } from 'react-dom/client';
 
 import Component from 'src/'
 
 describe('Component', () => {
-  let node
+  let node, root;
 
   beforeEach(() => {
     node = document.createElement('div')
   })
 
   afterEach(() => {
-    unmountComponentAtNode(node)
+    root.unmount();
   })
 
   it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
+    root = createRoot(node)
+    root.render(<Component/>, node, () => {
       expect(node.innerHTML).toContain('Welcome to React components')
     })
   })
