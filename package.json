@@ -1,5 +1,5 @@
 {
-  "name": "toasted-notes",
+  "name": "@conveyorhq/toasted-notes",
   "version": "3.2.0",
   "description": "Flexible, easy to implement toast notifications for react",
   "main": "commonjs/index.js",
@@ -19,8 +19,8 @@
     "@types/react-dom": "^18.0.6"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.0.5",
